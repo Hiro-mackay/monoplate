@@ -1,106 +1,36 @@
-# 🌐 Web Application
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Next.js 15 + React 19 によるモダンなフロントエンドアプリケーション
+## Getting Started
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black.svg)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev/)
-
-## ✨ 特徴
-
-- **⚡ 高速開発**: Next.js 15 + Turbopack
-- **🎨 美しい UI**: shadcn/ui + Radix UI
-- **🌙 ダークモード**: Next Themes 対応
-- **📱 レスポンシブ**: モバイルファーストデザイン
-- **🔐 認証**: Better Auth 統合
-
-## 🚀 開発
+First, run the development server:
 
 ```bash
-# 開発サーバー起動
+npm run dev
+# or
+yarn dev
+# or
 pnpm dev
-
-# ビルド
-pnpm build
-
-# リント
-pnpm lint
+# or
+bun dev
 ```
 
-## 🎨 UI コンポーネント
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-# コンポーネントを追加
-pnpm dlx shadcn@latest add button -c apps/web
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```tsx
-import { Button } from "@workspace/ui/components/button";
-import { Card } from "@workspace/ui/components/card";
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-export default function HomePage() {
-  return (
-    <Card>
-      <Button>Click me</Button>
-    </Card>
-  );
-}
-```
+## Learn More
 
-## 🔐 認証
+To learn more about Next.js, take a look at the following resources:
 
-```tsx
-import { useAuth } from "@workspace/auth/client";
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-export default function Profile() {
-  const { user, signIn, signOut } = useAuth();
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-  if (!user) {
-    return <button onClick={signIn}>Sign In</button>;
-  }
+## Deploy on Vercel
 
-  return (
-    <div>
-      <p>Welcome, {user.name}!</p>
-      <button onClick={signOut}>Sign Out</button>
-    </div>
-  );
-}
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🎨 テーマ
-
-```tsx
-import { ThemeProvider } from "next-themes";
-import { ThemeToggle } from "@workspace/ui/components/theme-toggle";
-
-export default function Layout({ children }) {
-  return (
-    <ThemeProvider attribute="class" defaultTheme="system">
-      {children}
-      <ThemeToggle />
-    </ThemeProvider>
-  );
-}
-```
-
-## 📱 レスポンシブデザイン
-
-```tsx
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <Card className="p-4">
-    <h2 className="text-lg font-semibold">Card Title</h2>
-    <p className="text-sm text-muted-foreground">Card content</p>
-  </Card>
-</div>
-```
-
-## 🚀 デプロイ
-
-```bash
-# Vercelにデプロイ
-vercel --prod
-```
-
----
-
-**Web App** - モダンなフロントエンドアプリケーション 🌐
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
