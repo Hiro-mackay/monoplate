@@ -1,31 +1,79 @@
-# shadcn/ui monorepo template
+# 🚀 Monoplate
 
-This template is for creating a monorepo with shadcn/ui.
+モダンなフルスタック Web アプリケーション開発のためのモノレポテンプレート
 
-## Usage
+[![Node.js](https://img.shields.io/badge/Node.js-22+-green.svg)](https://nodejs.org/)
+[![pnpm](https://img.shields.io/badge/pnpm-10.15.0-blue.svg)](https://pnpm.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9+-blue.svg)](https://www.typescriptlang.org/)
+
+## ✨ 特徴
+
+- **🚀 高速開発**: Turbo + pnpm による最適化されたモノレポ
+- **🎨 美しい UI**: shadcn/ui + Radix UI によるアクセシブルなコンポーネント
+- **🔐 認証システム**: Better Auth による堅牢な認証機能
+- **🗄️ データベース**: Drizzle ORM + Neon Database
+- **⚡ エッジランタイム**: Cloudflare Workers 対応
+
+## 🚀 クイックスタート
 
 ```bash
-pnpm dlx shadcn@latest init
+# リポジトリをクローン
+git clone <your-repo-url>
+cd monoplate
+
+# 依存関係をインストール
+pnpm install
+
+# 開発サーバーを起動
+pnpm dev
 ```
 
-## Adding components
+## 🏗️ アーキテクチャ
 
-To add components to your app, run the following command at the root of your `web` app:
+```
+monoplate/
+├── apps/
+│   ├── web/          # Next.js 15 + React 19 フロントエンド
+│   └── api/          # Hono + Cloudflare Workers API
+├── packages/
+│   ├── ui/           # shadcn/ui コンポーネントライブラリ
+│   ├── auth/         # Better Auth 認証システム
+│   ├── drizzle/      # Drizzle ORM データベース層
+│   ├── error/        # エラーハンドリングユーティリティ
+│   └── tsconfig/     # 共有TypeScript設定
+```
+
+## 📦 利用可能なスクリプト
 
 ```bash
+pnpm dev          # 開発サーバー起動
+pnpm build        # ビルド
+pnpm lint         # リント
+pnpm format       # フォーマット
+pnpm typecheck    # 型チェック
+```
+
+## 🎨 UI コンポーネントの追加
+
+```bash
+# webアプリにコンポーネントを追加
 pnpm dlx shadcn@latest add button -c apps/web
 ```
 
-This will place the ui components in the `packages/ui/src/components` directory.
+## 📚 技術スタック
 
-## Tailwind
+- **フロントエンド**: Next.js 15, React 19, shadcn/ui, Tailwind CSS
+- **バックエンド**: Hono, Cloudflare Workers, Better Auth
+- **データベース**: Drizzle ORM, Neon Database
+- **開発ツール**: Turbo, Biome, TypeScript, pnpm
 
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
+## 🤝 コントリビューション
 
-## Using components
+1. このリポジトリをフォーク
+2. フィーチャーブランチを作成
+3. 変更をコミット
+4. プルリクエストを作成
 
-To use the components in your app, import them from the `ui` package.
+---
 
-```tsx
-import { Button } from "@workspace/ui/components/button"
-```
+**Monoplate** - モダンなフルスタック開発のための最適なテンプレート 🚀
