@@ -1,0 +1,30 @@
+{
+  "name": "@workspace/error",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [
+    "error",
+    "http-error",
+    "schema-error"
+  ],
+  "author": "@workspace",
+  "type": "module",
+  "exports": {
+    "./http": "./src/http.ts",
+    "./base": "./src/base-error.ts",
+    "./schemas": "./src/schema-error.ts",
+    "./code": "./src/code.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "format": "biome check --write .",
+    "lint": "biome ci ."
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@workspace/tsconfig": "workspace:*"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

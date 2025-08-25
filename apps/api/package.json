@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "type": "module",
+  "scripts": {
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "clean": "rm -rf node_modules",
+    "deploy": "wrangler deploy --minify",
+    "dev": "wrangler dev",
+    "format": "biome check --write .",
+    "lint": "biome ci ."
+  },
+  "dependencies": {
+    "@workspace/auth": "workspace:*",
+    "@workspace/drizzle": "workspace:*",
+    "hono": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@workspace/tsconfig": "workspace:*",
+    "wrangler": "^4.4.0"
+  }
+}

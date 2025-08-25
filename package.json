@@ -1,0 +1,26 @@
+{
+  "name": "monoplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "rm -rf node_modules",
+    "clean:all": "turbo clean",
+    "dev": "turbo dev",
+    "format": "turbo format",
+    "format:package.json": "pnpm dlx sort-package-json package.json apps/*/package.json packages/*/package.json",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@workspace/tsconfig": "workspace:*",
+    "lefthook": "^1.12.3",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22"
+  }
+}

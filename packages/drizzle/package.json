@@ -1,0 +1,37 @@
+{
+  "name": "@workspace/drizzle",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [],
+  "author": "@workspace",
+  "type": "module",
+  "exports": {
+    "./schemas": "./src/schemas/index.ts",
+    "./utils": "./src/utils/index.ts",
+    ".": "./src/db.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "db:generate": "drizzle-kit generate --config drizzle.config.ts",
+    "db:migrate": "drizzle-kit migrate --config drizzle.config.ts",
+    "db:push": "drizzle-kit push --config drizzle.config.ts",
+    "db:studio": "drizzle-kit studio --config drizzle.config.ts",
+    "format": "biome check --write .",
+    "lint": "biome ci ."
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@t3-oss/env-core": "catalog:",
+    "@workspace/tsconfig": "workspace:*",
+    "drizzle-orm": "^0.44.4",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "dotenv": "^17.2.1",
+    "drizzle-kit": "^0.31.4",
+    "tsx": "^4.20.5"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

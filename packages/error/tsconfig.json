@@ -1,0 +1,10 @@
+{
+  "extends": "@workspace/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/error/*": ["./src/*"]
+    }
+  },
+  "include": ["."]
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "//",
+  "files": {
+    "includes": ["app", "components", "lib", "types", "utils", "hooks"]
+  }
+}

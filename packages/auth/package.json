@@ -1,0 +1,28 @@
+{
+  "name": "@workspace/auth",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [
+    "auth"
+  ],
+  "type": "module",
+  "exports": {
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "format": "biome check --write .",
+    "lint": "biome ci ."
+  },
+  "dependencies": {
+    "@workspace/drizzle": "workspace:*",
+    "better-auth": "^1.3.7",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@workspace/tsconfig": "workspace:*"
+  },
+  "packageManager": "pnpm@10.15.0"
+}
