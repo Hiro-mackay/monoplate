@@ -18,7 +18,8 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "format": "biome check --write .",
-    "lint": "biome ci ."
+    "lint": "biome ci .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "zod": "catalog:"

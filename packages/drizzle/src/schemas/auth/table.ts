@@ -1,4 +1,4 @@
-import { PRIMARY_ID_LENGTH } from "@workspace/drizzle/utils/shared-consts";
+import { PRIMARY_ID_LENGTH } from "@workspace/drizzle/utils";
 import {
   boolean,
   pgTable,
